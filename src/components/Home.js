@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import Country from './Country';
 import { useDispatch, useSelector } from 'react-redux';
+import Country from './Country';
 import { fetchCountries, searchRegion } from '../redux/country/countrySlice';
 
 const Home = () => {
   const dispatch = useDispatch();
-  const countriesState = useSelector(state => state.country);
+  const countriesState = useSelector((state) => state.country);
   const countries = countriesState?.countries || [];
   const isLoading = countriesState?.isLoading || false;
   const error = countriesState?.error || false;
-  const [region, setRegion] = useState("");
+  const [region, setRegion] = useState('');
 
   useEffect(() => {
     dispatch(fetchCountries());
@@ -18,12 +18,31 @@ const Home = () => {
   const changeRegion = (event) => {
     const selectedRegion = event.target.value;
     setRegion(selectedRegion);
-    if (selectedRegion === "") {
+    if (selectedRegion === '') {
       dispatch(fetchCountries());
     } else {
       dispatch(searchRegion(selectedRegion));
     }
-  }
+  };
+
+  const displayCountries = () => {
+    if (isLoading) {
+      return <div>Loading...</div>;
+    }
+    if (error) {
+      return <div>Error loading data</div>;
+    }
+    const displayedCountries = countries && countries.length > 248
+      ? countries.slice(0, 248) : countries;
+    return displayedCountries.map((country) => (
+      <Country
+        key={country.alpha3Code}
+        name={country.name}
+        population={country.population}
+        countryCode={country.alpha3Code}
+      />
+    ));
+  };
 
   return (
     <div className="page-wrapper">
@@ -39,20 +58,7 @@ const Home = () => {
         </select>
       </div>
       <div className="countries">
-        {isLoading ? (
-          <div>Loading...</div>
-        ) : error ? (
-          <div>Error loading data</div>
-        ) : (
-          countries && (countries.length > 248 ? countries.slice(0, 248) : countries).map(country => (
-            <Country
-              key={country.alpha3Code}
-              name={country.name}
-              population={country.population}
-              countryCode={country.alpha3Code}
-            />
-          ))
-        )}
+        {displayCountries()}
       </div>
     </div>
   );
