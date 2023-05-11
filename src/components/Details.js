@@ -7,9 +7,9 @@ const Details = () => {
     const { isLoading, countryDetails } = useSelector((state) => state.country);
     const dispatch = useDispatch();
     const { countryCode } = useParams();
-    
+
     useEffect(() => {
-        if(countryCode) {
+        if (countryCode) {
             dispatch(searchCountry(countryCode.toLowerCase()));
         }
     }, [dispatch, countryCode]);
@@ -23,7 +23,8 @@ const Details = () => {
                         <h2>{countryDetails.name}</h2>
                     </div>
                     <div className="country-flag">
-                        <img src={countryDetails.flags.svg} alt={countryDetails.name} />
+                        {countryDetails.flags && <img src={countryDetails.flags.svg} alt={countryDetails.name} />}
+
                     </div>
                     <div className="details">
                         <table>
@@ -42,7 +43,7 @@ const Details = () => {
                                 </tr>
                                 <tr>
                                     <th>Time Zone</th>
-                                    <td>{countryDetails.timezones[0]}</td>
+                                    <td>{countryDetails.timezones && countryDetails.timezones[0]}</td>
                                 </tr>
                                 <tr>
                                     <th>Capital</th>
@@ -50,15 +51,15 @@ const Details = () => {
                                 </tr>
                                 <tr>
                                     <th>Currency</th>
-                                    <td>{countryDetails.currencies[0].name} ({countryDetails.currencies[0].symbol})</td>
+                                    <td>{countryDetails.currencies && countryDetails.currencies[0] && countryDetails.currencies[0].name} ({countryDetails.currencies && countryDetails.currencies[0] && countryDetails.currencies[0].symbol})</td>
                                 </tr>
                                 <tr>
                                     <th>Language</th>
-                                    <td>{countryDetails.languages[0].name} ({countryDetails.languages[0].nativeName})</td>
+                                    <td>{countryDetails.languages && countryDetails.languages[0] && countryDetails.languages[0].name} ({countryDetails.languages && countryDetails.languages[0] && countryDetails.languages[0].nativeName})</td>
                                 </tr>
                                 <tr>
                                     <th>Latitude & Longitude</th>
-                                    <td>{countryDetails.latlng.join(', ')}</td>
+                                    <td>{countryDetails.latlng && countryDetails.latlng.join(', ')}</td>
                                 </tr>
                                 <tr>
                                     <th>Area</th>
