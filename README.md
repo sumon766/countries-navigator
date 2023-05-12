@@ -186,7 +186,7 @@ If you like this project feel free to give me a star. Or if you want, you can bu
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank microverse for providing such an amazing project.
+I would like to thank microverse for providing such an amazing project. Also, the user interface design credit goes to [Nelson Sakwa](https://www.behance.net/sakwadesignstudio), thanks to him.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
