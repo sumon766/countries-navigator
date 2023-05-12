@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/react-gh-pages/static/css/main.684586ff.css",
-    "main.js": "/react-gh-pages/static/js/main.c73c9362.js",
-    "static/media/world2.png": "/react-gh-pages/static/media/world2.4674a8741d9ac152caac.png",
-    "index.html": "/react-gh-pages/index.html",
-    "main.684586ff.css.map": "/react-gh-pages/static/css/main.684586ff.css.map",
-    "main.c73c9362.js.map": "/react-gh-pages/static/js/main.c73c9362.js.map"
+    "main.css": "/countries-navigator/static/css/main.6f2e9898.css",
+    "main.js": "/countries-navigator/static/js/main.c73c9362.js",
+    "static/media/world2.png": "/countries-navigator/static/media/world2.4674a8741d9ac152caac.png",
+    "index.html": "/countries-navigator/index.html",
+    "main.6f2e9898.css.map": "/countries-navigator/static/css/main.6f2e9898.css.map",
+    "main.c73c9362.js.map": "/countries-navigator/static/js/main.c73c9362.js.map"
   },
   "entrypoints": [
-    "static/css/main.684586ff.css",
+    "static/css/main.6f2e9898.css",
     "static/js/main.c73c9362.js"
   ]
 }
