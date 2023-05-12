@@ -1,7 +1,7 @@
 {
   "name": "countries-navigator",
   "version": "0.1.0",
-  "homepage": "https://sumon766.github.io/react-gh-pages",
+  "homepage": "https://sumon766.github.io/countries-navigator",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
