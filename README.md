@@ -68,6 +68,7 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - [Live Demo Link](https://sumon766.github.io/countries-navigator/)
+- [Project video Link](https://www.loom.com/share/555478c04e1540f2b292b928d8d29cf1)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
