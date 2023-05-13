@@ -4,9 +4,10 @@ import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
-const Country = ({ name, population, countryCode }) => (
+const Country = ({ name, population, countryCode, flag }) => (
   <div className="country">
     <h3>{name}</h3>
+    <img src={flag} alt={name} />
     <h4>{population}</h4>
     <NavLink to={`/countries/${countryCode}`}>
       See details

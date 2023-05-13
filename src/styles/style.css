@@ -47,6 +47,12 @@
   padding: 8px 10px;
 }
 
+.country img {
+  height: 50px;
+  width: 120px;
+  margin-top: 25px;
+}
+
 .back-button a:hover {
   color: #fff;
   border: 1px solid #fff;
