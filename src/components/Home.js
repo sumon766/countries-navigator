@@ -40,6 +40,7 @@ const Home = () => {
         name={country.name}
         population={country.population}
         countryCode={country.alpha3Code}
+        flag={country.flags.svg}
       />
     ));
   };
