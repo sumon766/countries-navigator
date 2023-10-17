@@ -47,7 +47,7 @@ const Details = () => {
                   <td>{countryDetails.timezones && countryDetails.timezones[0]}</td>
                 </tr>
                 <tr>
-                  <th>Capital</th>
+                  <th>Capital of the country</th>
                   <td>{countryDetails.capital}</td>
                 </tr>
                 <tr>
